@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content={% block description %}"TODO"{% endblock %}>
+    <link rel="stylesheet" href="/site.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans">
+    <title>{% block title %}{{ config.title }}{% endblock %}</title>
+</head>
+
+<body>
+    <section class="section">
+        <div class="header">
+        {% block header %}
+		{% endblock %}
+        {% include "include/nav.html" %}
+        </div>
+		<div class="content {% block content_class %}{% endblock %}">
+		{% block content %}
+		{% endblock %}
+		</div>
+        {% block footer %}
+		<div class="footer">
+            From the river to the sea...
+		</div>
+        {% endblock %}
+	</div>
+    </section>
+</body>
+</html>

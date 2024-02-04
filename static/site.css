@@ -1,0 +1,145 @@
+html {
+    background-color: magenta;
+}
+
+html, body {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    margin: 0;
+    line-height: 1.8rem;
+}
+
+body {
+    background-color: white;
+}
+
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    text-align: center;
+}
+
+.header > h1 {
+    background-color: black;
+    color: white;
+    padding: 1.3rem;
+    margin: 0;
+    border: 7px #ee2a35;
+    border-style: none none solid none;
+    font-size: 2rem;
+    line-height: 3rem;
+}
+
+.nav-bar {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.3rem;
+}
+
+.nav-bar ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    line-height: 3rem;
+}
+
+.nav-bar li {
+    font-weight: bold;
+    list-style: none;
+    padding-left: 0.7rem;
+    padding-right: 0.7rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.nav-bar a:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.nav-bar a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.content {
+    flex: 1;
+    margin: 1rem 1rem;
+    max-width: 640px;
+}
+
+.content > ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.content li.page-list + li.page-list {
+    margin-top: 3rem;
+}
+
+.footer {
+    flex: none;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+    padding: 1.3rem 0 1.3rem 0;
+    background-color: #009736;
+    color: white;
+    text-align: center;
+}
+
+.downstyle-anchor {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.header-group {
+    text-align: center;
+}
+
+.paginators > a {
+    text-decoration: none;
+}
+
+.paginator-previous {
+
+}
+
+.paginator-next {
+    float: right;
+}
+
+@media only screen and (min-width: 601px) {
+    .nav-bar {
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-bar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 1rem;
+        width: fit-content;
+    }
+    .nav-bar li {
+        margin-right: 1rem;
+    }
+    .nav-bar li + li {
+        margin-top: 0;
+    }
+}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block header %}
+<h1>{{ section.title }}</h1>
+{% endblock %}
+{% block content %}
+<ol>
+    {% for page in paginator.pages %}
+    <li class="page-list">
+        <div class="newsletter-page">
+            <div class="header-group">
+                <h2>
+                    <a href="{{ page.path }}" class="downstyle-anchor">{{ page.title }}</a>
+                </h2>
+                {{ page.date }}
+            </div>
+            {{ page.content | safe }}
+        </div>
+    </li>
+    {% endfor %}
+</ol>
+{% if paginator.previous or paginator.next %}
+<hr>
+{% endif %}
+<nav class="paginators">
+{% if paginator.previous %}
+    <a class="paginator-previous" href="{{ paginator.previous }}">Previous</a>
+{% endif %}
+{% if paginator.next %}
+    <a class="paginator-next" href="{{ paginator.next}}">Next</a>
+{% endif %}
+</nav>
+
+{% endblock %}

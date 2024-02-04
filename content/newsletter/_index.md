@@ -1,0 +1,5 @@
++++
+title="Newsletter"
+sort_by="date"
+paginate_by=3
++++
